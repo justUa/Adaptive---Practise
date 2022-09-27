@@ -1,0 +1,17 @@
+.inner {
+    display: flex;
+}
+
+.left {
+    // background-color: var(--light);
+    width: 100px;
+}
+.right {
+    flex-grow: 1;
+    padding-left: 100px;
+    padding-right: 20px;
+}
+
+.col-half {
+    flex-basis: calc((100% - 1 * 30px) / 2);
+}

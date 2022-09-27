@@ -1,0 +1,14 @@
+.about {
+    &__left {
+    display: flex;
+    justify-content: space-between;
+        img {
+            max-width: 270px;
+        }
+    }
+    &__right {
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+}

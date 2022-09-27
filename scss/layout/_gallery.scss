@@ -1,0 +1,33 @@
+.gallery {
+    .row {
+        @include media(768px) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        @include media(1200px) {
+            flex-wrap: nowrap;
+        }
+    }
+    .sub-title {
+        margin-bottom: 44px;
+        @media screen and (max-width: 480px) {
+            margin-bottom: 71px;
+        }
+    }
+    &__item {
+        margin-bottom: 30px;
+        @include media(768px) {
+            @include sizes(330px, 360px);
+            // width: 330px;
+            // height: 360px;
+        }
+        @include media(1200px) {
+            width: 270px;
+            margin-bottom: 0px;
+        }
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+    }
+}

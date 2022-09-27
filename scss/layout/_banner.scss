@@ -1,0 +1,61 @@
+.first-banner {
+    background-image: url('../images/overlay/overlay-mob.jpg');
+    @include retina {
+        background-image: url('../images/overlay/overlay-mob@2x.jpg');
+    }
+    @include media(768px) {
+        background-image: none;
+        @include retina {
+            background-image: none;
+        }
+    }
+}
+
+.first-banner__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    @include media(768px) {
+        background-image: url('../images/overlay/overlay-tab.jpg');
+        @include retina {
+            background-image: url('../images/overlay/overlay-tab@2x.jpg');
+        }
+    }
+    @include media(1200px) {
+        background-image: url('../images/overlay/overlay.jpg');
+        @include retina {
+            background-image: url('../images/overlay/overlay@2x.jpg');
+        }
+    }
+}
+
+.first-banner__left {
+    display: none;
+    @include media(768px) {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.first-banner__contact-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.first-banner__contact {
+    position: absolute;
+    bottom: 30px;
+    transform: rotate(-90deg) translateX(50%);
+    display: flex;
+}
+
+.first-banner__inner {
+    min-height: 680px;
+}

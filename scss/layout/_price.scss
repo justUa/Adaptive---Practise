@@ -1,0 +1,42 @@
+.price {
+    background-color: var(--dark);
+    h2 {
+        margin-bottom: 44px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+        padding: 30px 20px;
+        flex-basis: calc((100% - 30px) / 2);
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &::before {
+            content: '';
+            height: 1px;
+            background-color: rgba(157, 164, 189, 0.12);
+            order: 2;
+            flex-grow: 1;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+    &__title {
+        order: 1;
+    }
+    &__value {
+        order: 3;
+    }
+    &__title,
+    &__value {
+        color: var(--third);
+    }
+}
